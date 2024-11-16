@@ -1,0 +1,29 @@
+spring:
+    application:
+        name: product-service
+    data:
+        mongodb:
+            username: alkhspamer
+            password: TestPassword
+            uri: mongodb+srv://lakhalachraf0:Qd03WnMPUZJeXcHg@cluster0.nprvc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+            database:  product
+    jackson:
+        deserialization:
+            FAIL_ON_UNKNOWN_PROPERTIES: false
+        serialization:
+            write-dates-as-timestamps: false
+server:
+    port: 9000
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+management:
+    endpoint: 
+        info:
+           enabled: true
+
+info:
+  app:
+    name: product service
