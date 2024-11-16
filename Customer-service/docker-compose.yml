@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: customer_db
+    environment:
+      - POSTGRES_USER=Admin
+      - POSTGRES_PASSWORD=TestPassword
+      - POSTGRES_DB=customer
+    ports:
+      - "25062:5432"
+    restart: always

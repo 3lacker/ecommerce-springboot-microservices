@@ -27,3 +27,9 @@ management:
 info:
   app:
     name: product service
+
+
+logging:
+    level:
+        org:
+            springframework: ${LOGGING_LEVEL_WHOLESALED:DEBUG}

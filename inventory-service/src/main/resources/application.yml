@@ -1,0 +1,20 @@
+spring:
+    application:
+        name: inventory-service
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:25061/inventory?createIfNotExists=true
+        username: Admin
+        password: TestPassword
+        database: inventory
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        hibernate:
+            ddl-auto: update
+server:
+    port: 9001
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/

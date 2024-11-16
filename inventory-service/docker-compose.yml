@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: inventory_db
+    environment:
+      - POSTGRES_USER=Admin
+      - POSTGRES_PASSWORD=TestPassword
+      - POSTGRES_DB=inventory
+    ports:
+      - "25061:5432"
+    restart: always
